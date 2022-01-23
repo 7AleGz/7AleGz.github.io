@@ -1,103 +1,62 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandro Gómez | Web Developer</title>
-		<link rel="icon" href="A.icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-</head>
-<body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flash Bikes | Store</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+
+    <body>
+
+        <div class="head">
+            <nav id="navbar">
+                <p class="head-title">FLASH BIKES</p>
+              <ul class="nav-list">
+                  <li><a href="#welcome-section">About</a></li>
+                  <li><a href="#products-section">Products</a></li>
+                  <li><a href="#contact-section">Contact</a></li>
+              </ul>
+          </nav>
+          </div>
+
+          
+        <div class="headResponsive">
+            <p class="head-title2">FLASH BIKES</p>
+            <ul class="menu">
+                <li><a class="menuItem" id="button1" href="#welcome-section">About</a></li>
+                <li><a class="menuItem" id="button2" href="#products-section">Products</a></li>
+                <li><a class="menuItem" id="button3" href="#contact-section">Contact</a></li>
+            </ul>
+            <button class="hamburger">
+                <i class="menuIcon material-icons">menu</i>
+                <i class="closeIcon material-icons">close</i>
+            </button>
+        </div>
+
+        <div id="main">
+            <div class="container">
+                <div id="welcome-section">
+                    <img src="https://www.kandani.es/img/Ebikes/slideebikes_0003.jpg" alt="Image of Mountain Bike" class="welcome-img"> 
+                </div>
+                <div id="products-section">
+                    <p>Products Section</p>
+                </div>
+                <div id="contact-section">
+                    <p>Contact Section</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>
+              FlashBikes©2022 | All rights reserved.
+            </p>
+          </footer>
+
+    </body>
     
-  <div class="head">
-    <nav id="navbar">
-      <ul class="nav-list">
-          <li><a href="#welcome-section">About</a></li>
-          <li><a href="#projects">Work</a></li>
-          <li><a href="#contact-section">Contact</a></li>
-      </ul>
-  </nav>
-  </div>
-
-  <div class="headResponsive">
-          <ul class="menu">
-              <li><a class="menuItem" id="button1" href="#welcome-section">About</a></li>
-              <li><a class="menuItem" id="button2" href="#products-section">Products</a></li>
-              <li><a class="menuItem" id="button3" href="#contact-section">Contact</a></li>
-          </ul>
-      <button class="hamburger">
-        <i class="menuIcon material-icons">menu</i>
-        <i class="closeIcon material-icons">close</i>
-      </button>
-  </div>
-
-  <div id="main">
-
-    <section id="welcome-section">
-      <h1>Hey, I'm <span class="h1-span">Alejandro Gómez</span></h1>
-      <p><span class="p-span">a web developer</span></p>
-      
-    </section>
-
-    <section id="projects">
-      <h2>These are some of my projects</h2>
-      <div class="project-tile"><a href="https://codepen.io/7AleGz/full/XWgBzeX" class="project-item-a1" target="_blank"><span class="project-title">Tribute Page</span></a></div>
-      <div class="project-tile"><a href="https://codepen.io/7AleGz/full/qBjvMaG" class="project-item-a2" target="_blank"><span class="project-title">Survey Form</span></a></div>
-      <div class="project-tile"><a href="https://codepen.io/7AleGz/full/LYjxEEx" class="project-item-a3" target="_blank"><span class="project-title">Product Landing Page</span></a></div>
-      <div class="project-tile"><a href="https://codepen.io/7AleGz/live/xxLpzoK" class="project-item-a4" target="_blank"><span class="project-title">Technical Documentation Page</span></a></div>
-    </section>
-    
-    <section id="contact-section">
-      
-    <h2>Let's work together...</h2>
-    <div class="social-media">
-      <div class="contact-item">
-         <a href="https://github.com/7AleGz" target="_blank" id="profile-link"><i class='bx bxl-github'></i><p>GitHub</p></a>
-      </div>
-      <div class="contact-item">
-        <a href="https://freecodecamp.org/fccff01cf5c-f9bf-415e-86b1-67d5573952f6" target="_blank"><i class="fab fa-free-code-camp"></i><p>FreeCodeCamp</p></a>
-      </div>
-      <div class="contact-item">
-        <a href="https://codepen.io/7AleGz" target="_blank"><i class='bx bxl-codepen'></i><p>CodePen</p></a>
-      </div>
-      <div class="contact-item">
-        <a href="https://instagram.com/7alexgz" target="_blank"><i class='bx bxl-instagram'></i><p>Instagram</p></a>
-      </div>
-    </div>
-
-    <i class="contact-line"></i>
-
-    <form action="" class="form">
-      Name <br>
-      <input type="text" class="name" required>
-    <form action="" class="form"><br><br>
-      Email <br>
-      <input type="email" class="email" required><br><br>
-      Type of Project <br>
-      <select name="type" required>
-        <option disabled selected value>Select an option</option>
-        <option name="mobileApp">Mobile App</option>
-        <option name="webApp">Web App</option>
-      </select><br><br>
-      Additional details <br>
-      <textarea name="comments" placeholder="Enter your comment here..."></textarea><br><br>
-      <button type="submit">Submit</button>
-    </form>
-
-    </section>
-
-    <footer>
-      <p>
-        Handcrafted by me ©2021 | All rights reserved.
-      </p>
-    </footer>
-
-  </div>
-
-</body>
-
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 
 </html>
