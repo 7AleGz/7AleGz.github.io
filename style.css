@@ -428,7 +428,7 @@ footer p {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
     .menu a {
         font-size: 1em;
     }
@@ -470,6 +470,7 @@ footer p {
         gap: 10px;
     }
     #projects h2 {
+        margin-top: 10px;
         margin-bottom: 10px;
     }
     .project-tile {
