@@ -1,395 +1,821 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,300&family=Red+Hat+Mono:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    box-sizing: border-box;
-    list-style: none;
-    scroll-behavior: smooth;
-    outline: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: #ccc;
-} 
+  font-family: 'Palanquin', sans-serif;
+  background-color: #1E1E1E;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
 
 .headResponsive {
     display: none;
 }
 
-#navbar {
-    position: fixed;
-    width: 100%;
-    height: 70px;
-    display: grid;
-    align-content: center;
-    justify-content: end;
+#nav-bar {
+  background: #1E1E1E;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
 }
 
-#navbar ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    font-family: 'Red Hat Mono', sans-serif, monospace;
-    font-size: 1.3em;
+#header-img {
+  height: 70px;
+  padding: 3px;
 }
 
-#navbar ul li {
-    margin: 15px;
-    padding: 9px 5px;
-    border: 2px solid #fff;
-    border-radius: 20px;
-    transition: all .5s ease;
+label.logo {
+  color: #fff;
+  position: absolute;
+  font-size: 3em;
+  line-height: 70px;
+  padding-right: 100px;
+  font-family: 'Gemunu Libre', sans-serif;
 }
 
-#navbar a {
-    padding: 10px 5px;
-    color: #fff;
-    transition: all .4s ease;
+#nav-bar ul {
+  float: right;
+  margin-right: 10px;
 }
 
-#navbar li:hover {
-    background: #fff;
-    border-radius: 20px;
+#nav-bar ul li {
+  display: inline-block;
+  line-height: 70px;
+  margin: 0 5px;
 }
 
-#navbar a:hover {
-    color: #000;
+#nav-bar ul li a {
+  color: #fff;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
 }
 
-section {
-    display: grid;
-    align-content: center;
-    justify-items: center;
+.mini-logo {
+  display: none;
 }
 
-/* ------------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-#welcome-section {
-    width: 100%;
-    height: 100vh;
-    background-image: url(https://a-static.besthdwallpaper.com/niebla-en-el-bosque-papel-pintado-2560x1440-11046_51.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    text-align: center;
-}
-#welcome-section h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 5em;
-    color: #fff;
-    text-align: center;
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-#welcome-section .h1-span:hover {
-    color: #000;
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+#home-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 8;
 }
 
-#welcome-section p {
-    margin: 10px;
+.home-img {
+  width: 100%;
+  height: 100vh;
+  filter: saturate(0);
 }
 
-.h1-span {
-    transition: all .5s ease;
+#home-section .home-img__text {
+  background-color: hsla(0, 0%, 12%, 0.9);
+  z-index: 9;
+  position: absolute;
+  width: 23em;
+  height: 15em;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.h1-span:hover {
-    background: #fff;
+.home-img__text h3 {
+  font-size: 2.7em;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
 }
 
-.p-span {
-    background: #005030;
-    padding: 0 7px 0 7px;
+.home-img__text p {
+  font-size: 1em;
+  color: #fff;
+  font-family: 'Palanquin', sans-serif;
+  margin-top: -30px;
 }
 
-#welcome-section p {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 3.5em;
-    font-style: italic;
+#home-section button {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid#fff;
+  width: 90%;
+  height: 50px;
+  font-size: 1.5em;
+  text-transform: uppercase;
 }
 
-/* ------------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-#projects {
-    width: 100%;
-    height: 100vh;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    background: #092436;
-    grid-template-columns: repeat(2, .7fr);
-    grid-template-rows: .1fr .7fr .7fr;
-    grid-template-areas:
-        "head head"
-        "izq der"
-        "izq der";
-    grid-gap: 50px;
-    padding: 50px;
+.guitars-section__a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid#fff;  
+  outline: none;
+  text-decoration: none;
+  width: 90%;
+  height: 50px;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Palanquin', sans-serif;
 }
 
-#projects h2 {
-    grid-area: head;
+.guitars-section__a:link {
+  color: #fff;
 }
 
-#projects .project-tile {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    border: 1px solid #aaa;
-    text-align: center;
+.guitars-section__a:visited {
+  color: #fff;
 }
 
-.project-title {
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.guitars-section__a:focus {
+  background: #fff;
+  color: #000;
 }
 
-.project-title:hover {
-    background-color: hsla(0, 0%, 0%, 0.7);
-    color: #fff;
-    transition: all .4s ease;
+.guitars-section__a:hover {
+  background: #fff;
+  color: #000;
+  transition: .5s;
+  cursor: pointer;
 }
 
-.project-item-a1 {
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-    background-image: url(https://improntamusic.com/wp-content/uploads/2018/08/porta-1.jpg);
-    background-size: cover;
+.guitars-section__a:active {
+  background: #fff;
+  color: #000;
 }
 
-.project-item-a2 {
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-    background-image: url(https://images.hdqwalls.com/download/time-lapse-asphalt-road-5k-yg-1920x1080.jpg);
-    background-size: cover;
-}
-.project-item-a3 {
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-    background-image: url(https://images.wallpaperscraft.com/image/single/guitarist_electric_guitar_guitar_208772_2560x1600.jpg);
-    background-size: cover;
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+#about-section {
+  width: 100%;
+  height: auto;
+  background-color: #f2f2f2;
+  z-index: 1;
 }
 
-.project-item-a4 {
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-    background-image: url(https://geeksprep.com/wp-content/uploads/2021/06/javascrip.jpg);
-    background-size: cover;
-    background-position: center;
+.text-img {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.title {
+  margin: 105px 0 30px 0;
+  text-align: center;
+  font-size: 2em;
+  z-index: 6;
+}
+
+.about-text {
+  display: block;
+  font-size: 1.5em;
+  margin: auto 20px;
+}
+
+.about-img {
+  width: 53%;
+  height: auto;
+}
+
+.about-title {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  position: relative;
+  font-size: 1.9em;
+}
+
+.about-title::after {
+  content: "";
+  display: block;
+  width: 40vw;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: -1;
+}
+.about-title::before {
+  content: "";
+  display: block;
+  width: 40vw;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: -1;
+}
+
+.about-title__span {
+  background-color: #f2f2f2;
+  z-index: 6;
+  padding: 5px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+#custom-guitars-section {
+  display: flex;
+  align-items: center;  
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 100%;
+  height: auto;
+  background-color: #e2e2e2;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+#video {
+  margin: auto;
+  max-width: 100%;
+  max-height: 90vh;
+}
+
+#custom-guitars-section .h3-title {
+  font-size: 2em;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+#custom-guitars-section .h3-subtitle {
+  font-size: 1.7em;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#custom-guitars-section p {
+  margin-top: 3px;
+  margin-bottom: 30px;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#form input {
+  width: 50%;
+  margin: 5px auto;
+  height: 2.7em;
+  border-radius: 2px;
+  outline: none;
+  padding: 7px;
+}
+
+#email {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #01b87b;
+}
+
+#submit {
+  border: none;
+  cursor: pointer;
+  background-color: #094;
+}
+
+#submit:hover {
+  background-color: #37af65;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+#guitars-section {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background-color: #ccc;
+  margin: auto;
+  z-index: 1;
+}
+
+.guitars-title {
+  text-align: center;
+  font-size: 2em;
+  position: relative;
+  margin-top: 100px;
+}
+
+.guitars-title::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: -1;
+}
+
+.guitars-title::before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: -1;
+}
+
+.guitars-title__span {
+  background-color: #ccc;
+  z-index: 6;
+  padding: 7px;
+}
+
+/* ------------------------------------------------------------------- PRODUCT CARD --------------------------------------------------------------------- */
+
+
+.product-card {
+  position: relative;
+  width: 60%;
+  margin: 30px auto;
+  border-radius: 5px;
+  padding: 20px 30px 30px 30px;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.product-card .logo-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card .logo-cart img {
+  width: 70px;
+  height: auto;
+}
+
+.product-card .logo-cart i {
+  font-size: 27px;
+  color: #707070;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.product-card .logo-cart i:hover {
+  color: #333;
+}
+
+.product-card .main-images {
+  position: relative;
+  width: 100%;
+  height: 15em;
+  margin: 30px 0px; 
+}
+
+.product-card .main-images img {
+  position: absolute;
+  height: inherit;
+  object-fit: cover;
+  top: 0px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  left: -100%;
+  right: -100%;
+  top: -100%;
+  bottom: -100%;
+  margin: auto;
+  min-height: 100%;
+}
+
+.product-card .main-images img.active {
+  opacity: 1;
+}
+
+.product-card .guitar-details .guitar_name {
+  font-size: 24px;
+  font-weight: 500;
+  color: #161616;
+}
+
+.product-card .guitar-details p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #333;
+  text-align: justify;
+}
+
+.product-card .guitar-details .stars i {
+  margin: 0 -1px;
+  color: #333;
+}
+
+.product-card .color-price .color-option {
+  display: flex;
+  align-items: center;
+}
+
+.color-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.color-price .color-option .color {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin-right: 8px;
+}
+
+.color-option  .circles {
+  display: flex;
+}
+
+.color-option  .circles .circle {
+  height: 18px;
+  width: 18px;
+  background: #000;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+
+.color-option  .circles .circle.black.active {
+  box-shadow: 0 0 0 2px #fff,
+              0 0 0 4px #000;
+}
+
+.color-option  .circles .circle.white {
+  background: #ddb;
+}
+
+.color-option  .circles .circle.white.active {
+  box-shadow: 0 0 0 2px #fff,
+              0 0 0 4px #ddb;
+}
+
+.color-option  .circles .circle.blue {
+  background: #003585;
+}
+
+.color-option  .circles .circle.blue.active {
+  box-shadow: 0 0 0 2px #fff,
+              0 0 0 4px #003585;
+}
+
+.color-option  .circles .circle.red {
+  background: #a50500;
+}
+
+.color-option  .circles .circle.red.active {
+  box-shadow: 0 0 0 2px #fff,
+              0 0 0 4px #a50500;
+}
+
+.color-price .price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-price .price .price_num {
+  font-size: 25px;
+  font-weight: 600;
+  color: #707070;
+}
+
+.button {
+  background-color: #161616;
+  width: 100%;
+  height: 3em;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.button button {
+  background-color: #094;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.button button:hover {
+  background-color: #37af65;
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------------------------------ */
+
+.product-card2 {
+  position: relative;
+  width: 60%;
+  margin: 30px auto;
+  border-radius: 5px;
+  padding: 20px 30px 30px 30px;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.product-card2 .logo-cart2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card2 .logo-cart2 img {
+  width: 70px;
+  height: auto;
+}
+
+.product-card2 .logo-cart2 i {
+  font-size: 27px;
+  color: #707070;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.product-card2 .logo-cart2 i:hover {
+  color: #333;
+}
+
+.product-card2 .main-images2 {
+  position: relative;
+  width: 100%;
+  height: 15em;
+}
+
+.product-card2 .main-images2 img {
+  position: absolute;
+  height: inherit;
+  object-fit: cover;
+  top: 0px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  left: -100%;
+  right: -100%;
+  top: -100%;
+  bottom: -100%;
+  margin: auto;
+  min-height: 100%;
+}
+
+.product-card2 .main-images2 img.active2 {
+  opacity: 1;
+}
+
+.product-card2 .guitar-details2 .guitar_name2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #161616;
+}
+
+.product-card2 .guitar-details2 p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #333;
+  text-align: justify;
+}
+
+.product-card2 .guitar-details2 .stars i {
+  margin: 0 -1px;
+  color: #333;
+}
+
+.product-card2 .color-price2 .color-option2 {
+  display: flex;
+  align-items: center;
+}
+
+.color-price2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.color-price2 .color-option2 .color2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin-right: 8px;
+}
+
+.color-option2  .circles2 {
+  display: flex;
+}
+
+.color-option2  .circles2 .circle2 {
+  height: 18px;
+  width: 18px;
+  background: #000;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+
+.color-option2  .circles2 .circle2.sunrise {
+  background-image: radial-gradient(#e49400, #e42200);
+}
+
+.color-option2  .circles2 .circle2.sunrise.active2 {
+  box-shadow: 0 0 0 2px #e49400,
+              0 0 0 4px #e42200;
+}
+
+.color-option2  .circles2 .circle2.goldtop {
+  background: #ddb500;
+}
+
+.color-option2  .circles2 .circle2.goldtop.active2 {
+  box-shadow: 0 0 0 2px #fff,
+              0 0 0 4px #ddb500;
+}
+
+.color-option2  .circles2 .circle2.blackwhite {
+  background: #000;
+}
+
+.color-option2  .circles2 .circle2.blackwhite.active2 {
+  box-shadow: 0 0 0 2px #fff,
+              0 0 0 4px #000;
+}
+
+.color-price2 .price2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-price2 .price2 .price_num2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #707070;
+}
+
+.button2 {
+  background-color: #161616;
+  width: 100%;
+  height: 3em;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.button2 button {
+  background-color: #094;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.button2 button:hover {
+  background-color: #37af65;
+  cursor: pointer;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 #contact-section {
-    width: 100%;
-    min-height: 100vh;
-    height: auto;
-    background: #181818;
-    color: #ccc;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center; 
+  color: #919191;
 }
 
-#contact-section h2 {
-    font-size: 3em;
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 70px;
-    margin-bottom: 30px;
-    text-align: center;
+.contact-head {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
 }
 
-.social-media {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: 1.3em;
+.contact-head img {
+  height: 50px;
 }
 
-.contact-item {
-    margin: 7px;
+.contact-head h4 {
+  padding: 8px 0 30px 0;
+  font-size: 25px;
+  font-family: 'Gemunu Libre', sans-serif;;
 }
 
-.contact-item a {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    padding: 7px;
-    color: #fff;
-    border: 2px solid #fff;
-    font-family: 'Montserrat', monospace;
-}
-
-.contact-item i {
-    margin: 5px;
-}
-
-.contact-item a:hover {
-    background: #fff;
-    transition: all .7s ease;
-    color: #000;
+.contact-head p {
+  font-size: 20px;
 }
 
 .contact-line {
-    width: 80%;
-    content: "";
-    display: block;
-    height: 2px;
-    background: radial-gradient(#fff, #000);
-    margin-top: 30px;
+  width: 80%;
+  content: "";
+  display: block;
+  height: 2px;
+  background: radial-gradient(#fff, #1E1E1E);
+  margin-top: 30px;
 }
 
-#contact-section form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 70px 0 30px 0;
-    width: 100%;
-    font-family: 'Titillium Web', sans-serif;
+.contact-media {
+  display: flex;
+  padding: 20px;
+  font-size: 18px;
 }
 
-#contact-section form input {
-    width: 55%;
-    padding: 7px;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #008020;
-    margin-top: 5px;
-    color: #fff;
+.contact-media a {
+  padding-right: 30px;
+  color: #c2c2c2;
+  font-family: 'Arial Narrow', Arial, sans-serif;
 }
 
-#contact-section select {
-    width: 55%;
-    padding: 5px;
-    font-family: monospace;
-    margin-top: 7px;
-    background: #202020;
-    color: #fff;
-    border-bottom: 1px solid #008020;
+.contact-media a:hover {
+  cursor: pointer;
+  background: none;
 }
 
-#contact-section textarea {
-    width: 55%;
-    padding: 5px;
-    height: 7em;
-    resize: none;
-    background: transparent;
-    font-family: monospace;
-    color: #ccc;
-    margin-top: 7px;
+#contact-section .copyright {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-#contact-section button {
-    width: 55%;
-    padding: 5px;
-    height: 3em;
-    font-family: 'Montserrat', sans-serif;
-    font-size: .9em;
-    margin-top: 7px;
-    background: transparent;
-    border: none;
-    border: 1px solid #fff;
-    color: #fff;
-}
+/* ------------------------------------------------------------------------------ */
 
-#contact-section button:hover {
-    background: #fff;
-    color: #000;
-    transition: all .4s ease-in;
-    cursor: pointer;
-}
 
-#contact-section form input:hover {
-    background: #202020;
-}
-
-#contact-section form textarea:hover {
-    border: 1px solid #008020;
-}
-
-/* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-footer {
-    background: #1E1E1E;
-    height: auto;
-}
-
-footer p {
-    padding: 20px;
-    text-align: center;
-    font-family: 'Red Hat Mono', monospace;
-    color: #ccc;
-}
-
-/* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-@media (max-width: 1024px) {
-    #projects {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        gap: 10px;
-    }
-    #projects h2 {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    .project-tile {
-        display: flex;
-        flex-wrap: wrap;
-        height: 2em;
-    }
-}
-
-/* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
     .head {
         display: none;
     }
     .headResponsive {
         display: block;
     } 
+    .menu-nav {
+        display: none;
+    }
     .menu {
         position: fixed;
         transform: translateX(100%);
@@ -432,55 +858,139 @@ footer p {
         cursor: pointer;
         color: #fff;
     }
-    i.closeIcon.material-icons {
+    i#close {
         display: none;
     }
     .showMenu {
         transform: translateX(0);
     }
-    /* ---------------------------------------- */
-    #welcome-section h1 {
-        font-size: 3em;
+    .headResponsive__title {
+        display: flex;
+        justify-content: center;
     }
-    #welcome-section p {
-        font-size: 2em;
+    .head-title2 {
+        position: absolute;
+        font-size: 22vw;
+        color: #fff;
+        font-family: 'Teko', sans-serif;
+        width: 90vw;
+        margin-top: 30vh;
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(180deg, #fff, #0f3443);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
-    #contact-section h2 {
-        font-size: 2em;
-    }
+  label.logo {
+    font-size: 2.5em;
+  }
+  #nav-bar ul li a {
+    font-size: 15px;
+  }
+  #header-img {
+    height: 60px;
+    padding: 3px;
+    margin-top: 5px;
+  }
+  .product-card {
+    width: 80%;
+  }
+  .product-card2 {
+    width: 80%;
+  }
 }
 
-@media (max-width: 425px) {
-    .menu a {
-        font-size: 1em;
-    }
-    #welcome-section h1 {
-        font-size: 1.7em;
-    }
-    #welcome-section p {
-        font-size: 1.3em;
-    }
-    #contact-section h2 {
-        font-size: 1.5em;
-    }
-    .social-media {
-        display: flex;
-        flex-direction: column;
-        font-size: 1em;
-    }
-    .contact-item a {
-        padding: 3px;
-    }
-    #contact-section form input {
-        width: 90%;
-    }
-    #contact-section select {
-        width: 90%;
-    }
-    #contact-section textarea {
-        width: 90%;
-    }
-    #contact-section button {
-        width: 90%;
-    }
+@media (max-width: 870px) {
+  #home-section {
+    height: auto;
+  }
+  .home-img {
+    height: auto;
+  }
+  .text-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-img {
+    width: 95%;
+    margin-top: 35px;
+  }
+  #guitars-section {
+    height: auto;
+  }
+  .product-card {
+    width: 95%;
+  }
+  .main-images img {
+    width: auto;
+    height: auto;
+  }
+  .product-card2 {
+    width: 95%;
+  }
+  .main-images2 img {
+    width: auto;
+    height: auto;
+  }
+  #home-section .home-img__text {
+    width: 15em;
+    height: 10em;
+    margin: 10px;
+  }
+  .home-img__text h3 {
+    font-size: 1.7em;
+  }
+  .home-img__text p {
+    font-size: .7em;
+  }
+  #home-section button {
+    height: 20px;
+    font-size: .5em;
+  }
+  .guitars-section__a {
+    width: 90%;
+    height: 30px;
+    font-size: 1em;
+  }
+  .product-card {
+    width: 100%;
+  }
+  .product-card2 {
+    width: 100%;
+  }
+  #contact-section .copyright {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  #header {
+    max-width: 500px;
+  }
+  label.logo {
+    display: none;
+  }
+  .mini-logo {
+    display: inline;
+    color: #fff;
+    position: absolute;
+    font-size: 2em;
+    line-height: 70px;
+    font-family: 'Gemunu Libre', sans-serif;
+  }
+  .main-images img {
+    width: auto;
+    height: auto;
+  }
+  .main-images2 img {
+    width: auto;
+    height: auto;
+  }
+  #custom-guitars-section .h3-title { 
+    font-size: 1.4em;
+  }
+  #custom-guitars-section .h3-subtitle { 
+    font-size: 1.3em;
+  }
 }
